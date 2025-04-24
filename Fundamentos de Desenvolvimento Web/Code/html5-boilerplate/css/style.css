@@ -1,7 +1,79 @@
 /*! HTML5 Boilerplate v9.0.1 | MIT License | https://html5boilerplate.com/ */
 
-p {
-  color: rgb(0, 162, 255);
-  font-weight: bold;
-  font-size: larger;
+html, body {
+  height: 100%; /* importante para que tudo tenha uma base */
+  margin: 0;
+}
+
+.flex main {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.inverter {
+  flex: 2;
+  display: flex;
+}
+
+.header, .footer {
+  color: white;
+  padding: .5em;
+  background-color: gray;
+  border: 2px solid black;
+}
+
+.flex aside {
+  background-color: orange;
+  flex: 1;
+  text-align: right;
+}
+
+.flex nav {
+  background-color: rgb(0, 119, 255);
+  flex: 1;
+  text-align: left;
+}
+
+.flex .center {
+  background-color: rgb(115, 255, 0);
+  flex: 1;
+  text-align: center;
+}
+
+.center-content {
+  flex: 1;
+  display: flex;
+}
+
+.footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+@media screen and (max-width: 800px) {
+  .center-content {
+    flex-direction: column;
+  }
+
+  .inverter {
+    display: flex;
+    flex-direction: column-reverse;
+    flex: 4;
+  }
+
+  .flex .center {
+    flex: 4;
+    text-align: center;
+  }
+
+  .flex aside {
+    flex: 1;
+  }
+
+  .flex nav {
+    flex: 1;
+    text-align: left;
+  }
 }
