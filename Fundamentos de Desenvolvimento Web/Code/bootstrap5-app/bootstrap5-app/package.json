@@ -25,6 +25,9 @@
   },
   "dependencies": {
     "bootstrap": "^5.3.5",
-    "bootstrap-icons": "^1.11.3"
+    "bootstrap-icons": "^1.11.3",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "morgan": "^1.10.0"
   }
 }
