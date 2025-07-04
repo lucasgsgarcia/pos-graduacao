@@ -4,9 +4,7 @@ import br.edu.utfpr.exemplo.model.User;
 import br.edu.utfpr.exemplo.model.vo.UserVO;
 import br.edu.utfpr.exemplo.service.UserService;
 import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
 import org.modelmapper.ModelMapper;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -24,6 +22,7 @@ public class UserController {
     @PostMapping
     public ResponseEntity<UserVO> save(@RequestBody UserVO userVO) {
         User user = modelMapper.map(userVO, User.class);
+        //var userDetails = org.springframework.security.core.userdetails.User.withUserDetails(user).build();
         userService.save(user);
         userVO.setId(user.getId());
         return new ResponseEntity<>(userVO, HttpStatus.CREATED);
